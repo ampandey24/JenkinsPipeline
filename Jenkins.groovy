@@ -13,7 +13,7 @@ node
     }
     stage ('Reading POM.xml File'){
         pom = readMavenPom file: 'pom.xml'
-        echo "artifactId Value: ${pom['artifactId']}"
+        echo "artifactId Value: ${pom.artifactId}"
     }
     stage ('Build'){
         echo "Build"
