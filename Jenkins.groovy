@@ -1,4 +1,5 @@
 def pros;
+def pom;
 node 
 {
     stage('Ceckout SCM'){
@@ -9,6 +10,10 @@ node
     stage ('Reading Properties File'){
         pros = readProperties file: 'login.properties'
         echo "URL Value: ${pros['URL']}"
+    }
+    stage ('Reading POM.xml File'){
+        pom = readMavenPom file: 'pom.xml'
+        echo "artifactId Value: ${pom['artifactId']}"
     }
     stage ('Build'){
         echo "Build"
