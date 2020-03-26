@@ -1,4 +1,4 @@
-def pros
+def pros;
 node 
 {
     stage('Ceckout SCM'){
@@ -7,9 +7,8 @@ node
         
     }
     stage ('Reading Properties File'){
-        pros = readProperties file:'login.propties'
-        url = $pros['URL']
-        echo ${url}
+        pros = readProperties file: 'login.propties'
+        echo "URL Value: $(pros['URL'])"
     }
     stage ('Build'){
         echo "Build"
