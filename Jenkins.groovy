@@ -3,7 +3,7 @@ node
 {
     stage('Ceckout SCM'){
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/ampandey24/JenkinsPipeline.git']]])   
-        workspace = pwd()
+        //workspace = pwd()
         
     }
     stage ('Reading Properties File'){
