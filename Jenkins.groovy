@@ -7,8 +7,8 @@ node
         
     }
     stage ('Reading Properties File'){
-        pros = readProperties file: 'login.propties'
-        echo "URL Value: $(pros['URL'])"
+        pros = readProperties file: 'login.properties'
+        echo "URL Value: ${pros['URL']}"
     }
     stage ('Build'){
         echo "Build"
