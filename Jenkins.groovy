@@ -12,11 +12,12 @@ node
         echo "URL Value: ${pros['URL']}"
     }
     stage ('Reading POM.xml File'){
-        readpom = readMavenPom file: '';
+        readpom = readMavenPom file: 'pom.xml';
         echo "artifactId Value ${readpom.artifactId}"
     }
     stage ('Build'){
         echo "Build"
+        echo "Global URL Value: ${pros['URL']}"
     }
     stage ('Test'){
         echo "Test"
