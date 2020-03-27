@@ -10,6 +10,8 @@ node
     stage ('Reading Properties File'){
         pros = readProperties file: 'login.properties'
         echo "URL Value: ${pros['URL']}"
+        echo "USER NAME": ${pos['USER_NAME']}
+        echo "Env Job NAME: ${evn.JOB_NAME}"
     }
     stage ('Reading POM.xml File'){
         readpom = readMavenPom file: 'pom.xml';
