@@ -11,7 +11,7 @@ node
         pros = readProperties file: 'login.properties'
         echo "URL Value: ${pros['URL']}"
         echo "USER NAME: ${pros['USER_NAME']}"
-        echo "Env Job NAME: ${evn.JOB_NAME}"
+        echo "Env Job NAME: ${env.JOB_NAME}"
     }
     stage ('Reading POM.xml File'){
         readpom = readMavenPom file: 'pom.xml';
